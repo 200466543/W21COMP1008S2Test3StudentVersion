@@ -9,13 +9,24 @@ public abstract class InventoryItem {
 
     public InventoryItem(double purchasePrice, double sellingPrice, int quantityInStock, int quantitySold)
     {
+        setQuantityInStock(quantityInStock);
+        this.quantitySold = 0;
+        //setQuantitySold(quantitySold);
+        setPurchasePrice(purchasePrice);
+        setSellingPrice(sellingPrice);
     }
+
 
     public int getQuantityInStock() {
         return quantityInStock;
     }
 
     public void setQuantityInStock(int quantityInStock) {
+        if (quantityInStock >= 0){
+            this.quantityInStock = quantityInStock;
+        } else {
+            throw new IllegalArgumentException("Quantity in stock must be greater than 0.");
+        }
     }
 
     public int getQuantitySold() {
