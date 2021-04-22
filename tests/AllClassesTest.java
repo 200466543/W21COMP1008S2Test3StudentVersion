@@ -24,9 +24,9 @@ class AllClassesTest {
         tennisRacquet2 = new TennisRacquet("Head","Ti S6",250,"midPlus",42.15,189.99,15,15);
         tennisRacquet3 = new TennisRacquet("Wilson","Blade 98S V7.0",310,"oversize",50.99,201.99,12,12);
 
-        skis1 = new Skis("Rossignol","Hero Elite ST",165,310,899.76,10);
-        skis2 = new Skis("Rossignol","Hero Elite ST",155,310,899.76,10);
-        skis3 = new Skis("Volkl","RaceTiger SC Yellow",160,389.99,1099.76,4);
+        skis1 = new Skis("Rossignol","Hero Elite ST",165,310,899.76,10,10);
+        skis2 = new Skis("Rossignol","Hero Elite ST",155,310,899.76,10,10);
+        skis3 = new Skis("Volkl","RaceTiger SC Yellow",160,389.99,1099.76,4,4);
 
         inventory = new ArrayList<>();
 //        inventory.add(tennisRacquet1);
@@ -327,7 +327,7 @@ class AllClassesTest {
     @Test
     void setSkiBrandConstructorInvalid() {
         assertThrows(IllegalArgumentException.class, ()->
-                new Skis("Giant","Hero Elite ST",155,310,899.76,10));
+                new Skis("Giant","Hero Elite ST",155,310,899.76,10,10));
     }
 
     @Test
@@ -350,7 +350,7 @@ class AllClassesTest {
     @Test
     void setSkiModelConstructorInvalid() {
         assertThrows(IllegalArgumentException.class, ()->
-                new Skis("Atomic","Hero Elite ST",155,310,899.76,10));
+                new Skis("Atomic","Hero Elite ST",155,310,899.76,10,10));
     }
 
     @Test
@@ -389,13 +389,13 @@ class AllClassesTest {
     @Test
     void setSkiLengthConstructorInvalidLow() {
         assertThrows(IllegalArgumentException.class, ()->
-                new Skis("Rossignol","Hero Elite ST",59,310,899.76,10));
+                new Skis("Rossignol","Hero Elite ST",59,310,899.76,10,10));
     }
 
     @Test
     void setSkiLengthConstructorInvalidHigh() {
         assertThrows(IllegalArgumentException.class, ()->
-                new Skis("Rossignol","Hero Elite ST",221,310,899.76,10));
+                new Skis("Rossignol","Hero Elite ST",221,310,899.76,10,10));
     }
 
     /***************************************************************************
