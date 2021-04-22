@@ -21,6 +21,11 @@ public class Skis extends InventoryItem{
     }
 
     public void setBrand(String brand) {
+        if (DBUtility.getSkiBrands().contains(brand)){
+            this.brand = brand;
+        } else {
+            throw new IllegalArgumentException("Please enter a valid ski brand.");
+        }
     }
 
     public String getModel() {
