@@ -48,6 +48,11 @@ public abstract class InventoryItem {
     }
 
     public void setPurchasePrice(double purchasePrice) {
+        if (purchasePrice >= 0){
+            this.purchasePrice = purchasePrice;
+        } else {
+            throw new IllegalArgumentException("Purchase Price must be greater than 0.");
+        }
     }
 
     public double getSellingPrice() {
@@ -55,6 +60,11 @@ public abstract class InventoryItem {
     }
 
     public void setSellingPrice(double sellingPrice) {
+        if (sellingPrice > purchasePrice){
+            this.sellingPrice = sellingPrice;
+        } else {
+            throw new IllegalArgumentException("Selling price must be higher than Purchase price.");
+        }
     }
 
     public double getProfit()
