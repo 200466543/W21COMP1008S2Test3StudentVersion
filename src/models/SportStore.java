@@ -37,6 +37,10 @@ public class SportStore {
 
     public double calculateProfit()
     {
-        return -1;
+        double profit = 0;
+        for (InventoryItem i: inventory) {
+            profit = profit + i.getProfit();
+        }
+        return profit;
     }
 }
