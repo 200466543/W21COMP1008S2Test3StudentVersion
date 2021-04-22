@@ -34,6 +34,13 @@ public abstract class InventoryItem {
     }
 
     public void setQuantitySold(int quantitySold) {
+        if (quantityInStock >= quantitySold){
+            quantityInStock = quantityInStock - quantitySold;
+            this.quantitySold = quantitySold + this.quantitySold;
+            //this.quantitySold = quantitySold;
+        } else {
+            throw new IllegalArgumentException("Quantity in stock must be greater than Quantity Sold.");
+        }
     }
 
     public double getPurchasePrice() {

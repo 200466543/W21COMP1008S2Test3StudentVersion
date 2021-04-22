@@ -20,13 +20,13 @@ class AllClassesTest {
 
     @BeforeEach
     void setUp() {
-        tennisRacquet1 = new TennisRacquet("Head","Challenge Lite",240,"midsize",21.87,89.99,20, 20);
-        tennisRacquet2 = new TennisRacquet("Head","Ti S6",250,"midPlus",42.15,189.99,15,15);
-        tennisRacquet3 = new TennisRacquet("Wilson","Blade 98S V7.0",310,"oversize",50.99,201.99,12,12);
+        tennisRacquet1 = new TennisRacquet("Head","Challenge Lite",240,"midsize",21.87,89.99,20, 0);
+        tennisRacquet2 = new TennisRacquet("Head","Ti S6",250,"midPlus",42.15,189.99,15,0);
+        tennisRacquet3 = new TennisRacquet("Wilson","Blade 98S V7.0",310,"oversize",50.99,201.99,12,0);
 
-        skis1 = new Skis("Rossignol","Hero Elite ST",165,310,899.76,10,10);
-        skis2 = new Skis("Rossignol","Hero Elite ST",155,310,899.76,10,10);
-        skis3 = new Skis("Volkl","RaceTiger SC Yellow",160,389.99,1099.76,4,4);
+        skis1 = new Skis("Rossignol","Hero Elite ST",165,310,899.76,10,0);
+        skis2 = new Skis("Rossignol","Hero Elite ST",155,310,899.76,10,0);
+        skis3 = new Skis("Volkl","RaceTiger SC Yellow",160,389.99,1099.76,4,0);
 
         inventory = new ArrayList<>();
 //        inventory.add(tennisRacquet1);
@@ -106,7 +106,7 @@ class AllClassesTest {
     @Test
     void setIIPurchasePriceInvalidConstructor() {
         assertThrows(IllegalArgumentException.class, ()->
-                new TennisRacquet("Head","Challenge Lite",240,"midsize",-0.01,89.99,20,20));
+                new TennisRacquet("Head","Challenge Lite",240,"midsize",-0.01,89.99,20,0));
     }
 
     @Test
@@ -129,7 +129,7 @@ class AllClassesTest {
     @Test
     void setIISellingPriceInvalidConstructor() {
         assertThrows(IllegalArgumentException.class, ()->
-                new TennisRacquet("Head","Challenge Lite",240,"midsize",100.00,89.99,20,20));
+                new TennisRacquet("Head","Challenge Lite",240,"midsize",100.00,89.99,20,0));
     }
 
     @Test
@@ -170,13 +170,13 @@ class AllClassesTest {
     @Test
     void setTRWeightConstructorInvalidLow() {
         assertThrows(IllegalArgumentException.class, ()->
-                new TennisRacquet("Head","Challenge Lite",239,"midsize",21.87,89.99,20,20));
+                new TennisRacquet("Head","Challenge Lite",239,"midsize",21.87,89.99,20,0));
     }
 
     @Test
     void setTRWeightConstructorInvalidHigh() {
         assertThrows(IllegalArgumentException.class, ()->
-                new TennisRacquet("Head","Challenge Lite",311,"midsize",21.87,89.99,20,20));
+                new TennisRacquet("Head","Challenge Lite",311,"midsize",21.87,89.99,20,0));
     }
 
     @Test
@@ -230,7 +230,7 @@ class AllClassesTest {
     @Test
     void setTRHeadInvalidConstructor() {
         assertThrows(IllegalArgumentException.class, ()->
-                new TennisRacquet("Head","Challenge Lite",240,"big",21.87,89.99,20,20));
+                new TennisRacquet("Head","Challenge Lite",240,"big",21.87,89.99,20,0));
     }
 
     @Test
@@ -258,7 +258,7 @@ class AllClassesTest {
     @Test
     void setTRBrandInvalidConstructor() {
         assertThrows(IllegalArgumentException.class, ()->
-                new TennisRacquet("JDub","Challenge Lite",240,"midsize",21.87,89.99,20,20));
+                new TennisRacquet("JDub","Challenge Lite",240,"midsize",21.87,89.99,20,0));
     }
 
     @Test
@@ -297,7 +297,7 @@ class AllClassesTest {
     @Test
     void setTRModelInvalidConstructor() {
         assertThrows(IllegalArgumentException.class, ()->
-                new TennisRacquet("Wilson","Boom",310,"midplus",50.99,201.99,12,20));
+                new TennisRacquet("Wilson","Boom",310,"midplus",50.99,201.99,12,0));
     }
 
     /***************************************************************************
@@ -327,7 +327,7 @@ class AllClassesTest {
     @Test
     void setSkiBrandConstructorInvalid() {
         assertThrows(IllegalArgumentException.class, ()->
-                new Skis("Giant","Hero Elite ST",155,310,899.76,10,10));
+                new Skis("Giant","Hero Elite ST",155,310,899.76,10,0));
     }
 
     @Test
@@ -350,7 +350,7 @@ class AllClassesTest {
     @Test
     void setSkiModelConstructorInvalid() {
         assertThrows(IllegalArgumentException.class, ()->
-                new Skis("Atomic","Hero Elite ST",155,310,899.76,10,10));
+                new Skis("Atomic","Hero Elite ST",155,310,899.76,10,0));
     }
 
     @Test
@@ -389,13 +389,13 @@ class AllClassesTest {
     @Test
     void setSkiLengthConstructorInvalidLow() {
         assertThrows(IllegalArgumentException.class, ()->
-                new Skis("Rossignol","Hero Elite ST",59,310,899.76,10,10));
+                new Skis("Rossignol","Hero Elite ST",59,310,899.76,10,0));
     }
 
     @Test
     void setSkiLengthConstructorInvalidHigh() {
         assertThrows(IllegalArgumentException.class, ()->
-                new Skis("Rossignol","Hero Elite ST",221,310,899.76,10,10));
+                new Skis("Rossignol","Hero Elite ST",221,310,899.76,10,0));
     }
 
     /***************************************************************************
