@@ -7,7 +7,7 @@ public abstract class InventoryItem {
     private int quantityInStock, quantitySold;
     private double purchasePrice, sellingPrice;
 
-    public InventoryItem(double purchasePrice, double sellingPrice, int quantityInStock)
+    public InventoryItem(double purchasePrice, double sellingPrice, int quantityInStock, int quantitySold)
     {
     }
 
